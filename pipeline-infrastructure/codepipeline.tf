@@ -1,6 +1,6 @@
 # Simple Demo Pipeline
 resource "aws_codepipeline" "terraform_pipeline" {
-  name     = "${var.project_name}-demo-pipeline"
+  name     = "${var.project_name}-demo-pipeline-paul-landicho"
   role_arn = aws_iam_role.codepipeline_role.arn
 
   artifact_store {
@@ -61,6 +61,6 @@ resource "aws_codepipeline" "terraform_pipeline" {
   }
 
   tags = {
-    Name = "${var.project_name}-demo-pipeline"
+    Name = "${var.project_name}-demo-pipeline-paul-landicho"
   }
 }

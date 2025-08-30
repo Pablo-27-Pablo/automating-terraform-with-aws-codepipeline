@@ -1,6 +1,6 @@
 # IAM role for CodeBuild
 resource "aws_iam_role" "codebuild_role" {
-  name = "${var.project_name}-codebuild-role"
+  name = "${var.project_name}-codebuild-role-paul-landicho"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -42,8 +42,8 @@ resource "aws_iam_role_policy" "codebuild_policy" {
           "${aws_s3_bucket.terraform_state.arn}/*",
           aws_s3_bucket.pipeline_artifacts.arn,
           "${aws_s3_bucket.pipeline_artifacts.arn}/*",
-          "arn:aws:s3:::anthony-terraform-tfstate",
-          "arn:aws:s3:::anthony-terraform-tfstate/*"
+          "arn:aws:s3:::jabibakit",
+          "arn:aws:s3:::jabibakit/*"
         ]
       },
       {
@@ -64,7 +64,7 @@ resource "aws_iam_role_policy" "codebuild_policy" {
 
 # IAM role for CodePipeline
 resource "aws_iam_role" "codepipeline_role" {
-  name = "${var.project_name}-codepipeline-role"
+  name = "${var.project_name}-codepipeline-role-paul-landicho"
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
     Statement = [

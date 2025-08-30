@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "anthony-terraform-tfstate"
+    bucket = "jabibakit"
     key    = "automating-terraform-with-aws-codepipeline/stage4/terraform.tfstate"
     region = "ap-southeast-1"
   }
